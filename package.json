@@ -1,0 +1,17 @@
+{
+  "name": "agenciaviajesnode",
+  "version": "1.0.0",
+  "description": "App de una agencia de viajes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Ricardo Landínez <landinezrichard@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
