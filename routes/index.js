@@ -7,7 +7,8 @@ router.get("/", (req, res) => {
 });
 
 router.get("/nosotros", (req, res) => {
-  res.send("Nosotros");
+  const variable = "Algun valor";
+  res.render('nosotros', { variable });
 });
 
 router.get("/contacto", (req, res) => {
