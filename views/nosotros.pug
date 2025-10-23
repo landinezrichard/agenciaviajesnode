@@ -1,4 +1,31 @@
 extends layout/index.pug
 
 block contenido
-	h1 #{pagina}
+	main.container.mt-5
+			.row
+				.col-md-5
+					img.img-fluid(src="img/nosotros.jpg", alt="imagen sobre nosotros")
+				.col-md-7
+					h1 #{pagina}
+					
+					blockquote Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ipsa explicabo dolor itaque fugiat illo! Sapiente nulla quae animi, quam corrupti provident, accusantium, molestiae perspiciatis consectetur neque repellendus possimus illum!
+
+					p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam temporibus error nisi possimus a quisquam minus, magni totam est at esse sapiente illum inventore dolore. Inventore unde nihil corrupti expedita!
+
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolorum accusamus aliquid officiis molestias? Ut omnis delectus rem non repellendus esse sunt, nam quo, error maxime ipsa, soluta voluptate fugiat.
+
+	.listado-iconos.mt-5
+		.container.mt-5.py-5.text-center
+			.row
+				.col-md-4
+					img.img-fluid.mb-4(src="img/icono_seguridad.svg", alt="icono seguridad")
+					h3.mb-4 Seguridad
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+				.col-md-4
+					img.img-fluid.mb-4(src="img/icono_destinos.svg", alt="icono destinos")
+					h3.mb-4 Mejores Destinos
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+				.col-md-4
+					img.img-fluid.mb-4(src="img/icono_precios.svg", alt="icono precios")
+					h3.mb-4 Los mejores Precios
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
