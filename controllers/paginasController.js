@@ -18,8 +18,25 @@ const paginaViajes = async (req, res) => {
 
   res.render("viajes", {
     pagina: "Viajes",
-	viajes
+    viajes,
   });
+};
+
+// Muestra un viaje por su slug
+const paginaDetalleViaje = async (req, res) => {
+  const { slug } = req.params;
+
+  console.log("Detalle viaje: ", slug);
+
+  try {
+    const viaje = await Viaje.findOne({ where: { slug } });
+    res.render("viaje", {
+      pagina: "Información Viaje",
+      viaje,
+    });
+  } catch (error) {
+    console.log("Error al obtener el viaje: ", error);
+  }
 };
 
 const paginaTestimoniales = (req, res) => {
@@ -28,4 +45,4 @@ const paginaTestimoniales = (req, res) => {
   });
 };
 
-export { paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales };
+export { paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales, paginaDetalleViaje };
