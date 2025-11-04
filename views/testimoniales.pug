@@ -1,6 +1,32 @@
 extends layout/index.pug
 
 block contenido
+	h1.text-center.mt-5 #{pagina}
 	main.container.mt-5
-		.row
-			h1 #{pagina}
+		blockquote.text-center Lee sobre nuestros clientes y sus experiencias
+		.row.testimoniales
+			each testimonial in testimoniales
+				.col-md-6.col-lg-4.mb-4
+					.card
+						.card-body
+							blockquote.blockquote
+							p.mb-0 #{testimonial.mensaje}
+							footer.blockquote-footer #{testimonial.nombre}
+		.row.justify-content-center
+			.col.col-md-12
+				h2.w-100.text-center Agrega un Testimonial
+			.col.col-md-6
+				if(errores)
+					each error in errores
+						.alert.alert-danger.text-center(role="alert") #{error.mensaje}
+				form(action="/testimoniales" method="POST")
+					.form-group
+						label.form-label(for="nombre") Nombre:
+						input#nombre.form-control(type="text", name="nombre" placeholder="Tu Nombre", value=nombre)
+					.form-group
+						label.form-label(for="correo") Correo electrónico:
+						input#correo.form-control(type="text", name="correo" placeholder="Tu Correo", value=correo)
+					.form-group
+						label.form-label(for="mensaje") Mensaje:
+						textarea#mensaje.form-control(type="text", name="mensaje" placeholder="Tu mensaje", rows="4") #{mensaje}
+					input.btn.btn-success.btn-block(type="submit" value="Enviar Testimonial")
