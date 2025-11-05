@@ -4,12 +4,14 @@
   "description": "App de una agencia de viajes",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "type": "module",
   "author": "Ricardo Landínez <landinezrichard@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mysql2": "^3.15.3",
     "pug": "^3.0.3",
