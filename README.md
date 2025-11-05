@@ -54,10 +54,10 @@ ___
 ## Screenshots
 
 **Home**
-![App Screenshot](./preview-1.jpg)
+![App Screenshot](./preview-1.png)
 **Nosotros**
-![App Screenshot](./preview-2.jpg)
+![App Screenshot](./preview-2.png)
 **Viajes**
-![App Screenshot](./preview-3.jpg)
+![App Screenshot](./preview-3.png)
 **Testimoniales**
-![App Screenshot](./preview-4.jpg)
+![App Screenshot](./preview-4.png)
